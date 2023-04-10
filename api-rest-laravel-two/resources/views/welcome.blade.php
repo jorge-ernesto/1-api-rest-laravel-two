@@ -7,7 +7,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -83,6 +83,7 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                <p>Desarrollo full stack</p>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>

@@ -10,30 +10,32 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    protected $table      = "users";
+    protected $primaryKey = "id";
+    public $timestamps    = true;
+    
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'surname',
+        'role',        
+        'email',
+        'password',
+        'description',
+        'image'
     ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+    
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token'
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at' => 'datetime'
     ];
+
+    /* RELACION DE UNO A MUCHOS */
+    //Un usuario puede tener muchos posts
+    public function posts(){
+        return $this->hasMany("App\Post");
+    }
 }
